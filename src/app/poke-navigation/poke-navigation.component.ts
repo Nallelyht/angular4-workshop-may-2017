@@ -1,4 +1,4 @@
-import { Component, OnInit, Output, EventEmitter } from "@angular/core";
+import { Component, OnInit } from "@angular/core";
 
 @Component( {
   selector: "poke-navigation",
@@ -6,7 +6,7 @@ import { Component, OnInit, Output, EventEmitter } from "@angular/core";
   styles: [
     `
       .navbar-default .navbar-nav > .active >a {
-         margin-top: 3px;
+         margin-top: 0;
       }
     `
   ]
