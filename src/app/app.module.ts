@@ -2,10 +2,11 @@ import { NgModule }      from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent }  from './app.component';
+import { PokeNavigationComponent } from './poke-navigation/poke-navigation.component';
 
 @NgModule({
   imports:      [ BrowserModule ],
-  declarations: [ AppComponent ],
+  declarations: [ AppComponent, PokeNavigationComponent ],
   bootstrap:    [ AppComponent ]
 })
 export class AppModule { }
