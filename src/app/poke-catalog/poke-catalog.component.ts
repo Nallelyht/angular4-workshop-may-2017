@@ -1,4 +1,4 @@
-import { OnInit, Component } from "@angular/core";
+import { OnInit, Component, Input } from "@angular/core";
 import { Pokemon } from "./pokemon.model";
 import { PokeCatalogService } from "./poke-catalog.service";
 
@@ -10,6 +10,12 @@ import { PokeCatalogService } from "./poke-catalog.service";
 } )
 export class PokeCatalogComponent implements OnInit {
   pokemonList:Array<Pokemon> = [];
+  searchValue:string = "";
+
+  @Input() set searchValueInput( value:string ) {
+    console.log( "Input for search: " + value );
+    this.searchValue = value;
+  };
 
   constructor( private _pokeCatalogService:PokeCatalogService ) {
 

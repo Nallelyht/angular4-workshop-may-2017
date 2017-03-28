@@ -1,16 +1,12 @@
 import { Component } from '@angular/core';
 import { SearchValue } from './poke-navigation/search-value.model';
 
-@Component({
 @Component( {
   selector: 'my-app',
   template: `
-    <poke-navigation></poke-navigation>
-    <poke-catalog></poke-catalog>
     <poke-navigation (searchValueUpdated)="searchValueUpdated($event)"></poke-navigation>
+    <poke-catalog [searchValueInput]="parentSearchValue"></poke-catalog>
     `,
-})
-export class AppComponent  {  }
 } )
 export class AppComponent {
   parentSearchValue:string = "";
