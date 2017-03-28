@@ -31,4 +31,8 @@ export class PokeNavigationComponent implements OnInit {
     this.searchValueUpdated.emit( searchValue );
 
   }
+
+  onKeyUp( event:Event ) {
+    this.search( event );
+  }
 }
